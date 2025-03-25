@@ -1,0 +1,15 @@
+h1{font-size: 300;
+    font-style: italic;
+    color: pink;
+     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+     ;
+    }
+
+    .title{
+        color:rgb(81, 12, 146)
+    }
+
+    h2.title{
+        color: rgb(76, 15, 197);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
