@@ -37,5 +37,13 @@ ul {
     background-color: #526760;
   }
 
-
+text{
+    color: #d8dcff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+    font-weight: 100;
+    font-style: normal;
+    text-decoration: solid;
+    
+}
 
