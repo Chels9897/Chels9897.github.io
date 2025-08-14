@@ -1,5 +1,5 @@
 // Weather API Configuration
-const myApiKey = "df5ed081f4d8381a1f0b5c8c88aed473"; // Consider moving to environment variables in production
+const myApiKey = ""; // Consider moving to environment variables in production
 
 /**
  * Creates a new HTML element with optional classes and text content.
