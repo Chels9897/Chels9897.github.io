@@ -3,20 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
-    <link rel="stylesheet" href="../Styles/style.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
     <title>Work</title>
 </head>
 <body>
     <header>
-        <h1>Work</h1>
+        <nav class="navbar">
+            <div class="logo">CA portfolio</div>
+            <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="Work.html">Work</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <section id ="work-section">
+        <section class="work-section">
             <h2>Welcome to the Work Page</h2>
-            <p>This is a brief introduction about our work.</p>
+            <p>This page will showcase my class lesson on APIs.</p>
         </section>
+
+           <section class="weather-section">
+        <div class="weather-container">
+            <h2 class="weather-title">Current Weather</h2>
+            <div id="weatherCards" class="weather-grid">
+                <!-- Weather cards will be inserted here dynamically -->
+            </div>
+        </div>
+    </section>
     </main>
+    <script src="../JS/script.js"></script>
     <footer>
         <p>&copy; 2023 Your Website</p>
     </footer>

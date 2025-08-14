@@ -46,8 +46,32 @@ body {
     font-weight: 500;
 }
 
-.nav-links a.active {
-    border-bottom: 2px solid #e3655b;
+.card {
+    background: #e3655b;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 1rem;
+    max-width: 300px;
+    max-height: 400px;
+    justify-items: center;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 /* Menu toggle for mobile */
@@ -62,9 +86,6 @@ body {
 
 /* Hero Section */
 .hero {
-    background-image: url('../Images/hero banner.png');
-    background-size: cover;
-    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,34 +101,9 @@ body {
     color: #e3655b;
 }
 
-.btn {
-    background-color: #e3655b;
-    color: #fff;
-    padding: 0.6rem 1.2rem;
-    text-decoration: none;
-    border-radius: 4px;
-}
 
-/* Main content */
-.projects {
-    padding: 2rem;
-    text-align: center;
-}
 
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-}
-
-.project-card {
-    background: #f9f9f9;
-    border-radius: 6px;
-    overflow: hidden;
-    padding: 1rem;
-}
-
-/* About page */
+/* link css to About page */
 .about-section {
     padding: 2rem;
     max-width: 800px;
@@ -148,5 +144,267 @@ footer {
 
     .menu-toggle {
         display: block;
+    }
+}
+
+/* Weather Section Styles */
+.weather-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    position: relative;
+}
+
+.weather-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.weather-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #2d3748;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.weather-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 2px;
+}
+
+/* Weather Grid */
+.weather-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+/* Weather Card Styles */
+.weatherInfo.card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    min-height: 350px;
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.weatherInfo.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.weatherInfo.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.weatherInfo.card:hover::before {
+    opacity: 1;
+}
+
+/* Card Title */
+.cardTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.cardSubTitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #4a5568;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+/* Icon Container */
+.iconContainer {
+    margin: 10px 0 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weatherIcon {
+    width: 80px;
+    height: 80px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+}
+
+.weatherInfo.card:hover .weatherIcon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Card Info */
+.cardInfo {
+    margin: 8px 0;
+    font-weight: 500;
+    color: #4a5568;
+    font-size: 1rem;
+}
+
+.cardInfo.temperature {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #2d3748;
+    margin: 15px 0 10px 0;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cardInfo.feels-like {
+    font-size: 1.1rem;
+    color: #718096;
+    margin-bottom: 20px;
+}
+
+/* Weather Details */
+.weather-details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cardInfo.detail {
+    font-size: 0.9rem;
+    color: #718096;
+    margin: 0;
+}
+
+/* Loading State */
+.weatherInfo.card.loading {
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.loading-text {
+    color: #4a5568;
+    font-size: 1.1rem;
+    font-weight: 500;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Error State */
+.weatherInfo.card.error {
+    background: rgba(255, 245, 245, 0.9);
+    border: 1px solid rgba(255, 107, 107, 0.2);
+}
+
+.error-title {
+    color: #e53e3e;
+}
+
+.error-text {
+    color: #c53030;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .weather-section {
+        padding: 60px 0;
+    }
+    
+    .weather-container {
+        padding: 0 15px;
+    }
+    
+    .weather-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    
+    .weather-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .weatherInfo.card {
+        max-width: 100%;
+        padding: 25px;
+        min-height: 320px;
+    }
+    
+    .cardInfo.temperature {
+        font-size: 2rem;
+    }
+    
+    .weather-details {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .weather-section {
+        padding: 40px 0;
+    }
+    
+    .weather-title {
+        font-size: 1.8rem;
+    }
+    
+    .weatherInfo.card {
+        padding: 20px;
+        min-height: 300px;
+    }
+    
+    .cardTitle {
+        font-size: 1.3rem;
+    }
+    
+    .weatherIcon {
+        width: 60px;
+        height: 60px;
     }
 }

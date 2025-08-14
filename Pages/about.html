@@ -3,25 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
-    <link rel="stylesheet" href="../Styles/style.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
     <title>About</title>
 </head>
 <body>
     <header>
-        <h1>About</h1>
+        <nav class="navbar">
+            <div class="logo">CA portfolio</div>
+            <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="Work.html">Work</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <section>
+        <section class="about-section">
             <h2>Welcome to the About Page</h2>
             <p>This is a brief introduction about our website.</p>
+            <h1>About Me</h1>
+            <p>Hello! I’m Chelsia, an aspiring web developer with a passion for clean design and smooth user experiences. This portfolio showcases my journey and skills.</p>
         </section>
-          <main class="about-section">
-        <h1>About Me</h1>
-        <p>Hello! I’m Chelsia, an aspiring web developer with a passion for clean design and smooth user experiences. This portfolio showcases my journey and skills.</p>
-        
     </main>
-    </main>
+
+    <section class="video-section">
+        <h2>Content I learned from</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/MHPGeQD8TvI?si=K_TzWz4VPr75Obkp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
     <footer>
         <p>&copy; 2023 Your Website</p>
     </footer>
