@@ -7,18 +7,146 @@
     font-family: 'Josefin Sans', 'Montserrat', sans-serif;
 }
 
-header {
-    background-color: #f8f9fa;
-    padding: 1rem;
-    text-align: center;
+/* General styles */
+body {
+    font-family: 'Josefin Sans', 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: #fff;
+    color: #333;
 }
 
-main {
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #650d1b;
+    padding: 0.8rem 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #e3655b;
+}
+
+/* Menu toggle for mobile */
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: #fff;
+    display: none;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('../Images/hero banner.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(#650d1b, #b7628b);
+    color: #fff;
+    text-align: center;
     padding: 2rem;
 }
 
-footer {
-    background-color: #f8f9fa;
-    padding: 1rem;
+.hero h1 span {
+    color: #e3655b;
+}
+
+.btn {
+    background-color: #e3655b;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* Main content */
+.projects {
+    padding: 2rem;
     text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.project-card {
+    background: #f9f9f9;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+/* About page */
+.about-section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Work Page*/
+.work-section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Footer */
+footer {
+    background-color: #650d1b;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #650d1b;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 1rem;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
 }
