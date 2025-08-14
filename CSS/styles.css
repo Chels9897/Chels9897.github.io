@@ -54,6 +54,8 @@ body {
     max-width: 300px;
     max-height: 400px;
     justify-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .card img {
